@@ -24,8 +24,8 @@ public class Contact {
     @Column(name = "dateOfBirth")
     @Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
-    @OneToMany
-	private Set<Address> addresses = new HashSet<Address>();
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Address> addresses = new HashSet<Address>();
 
     public long getId() {
 		return id;

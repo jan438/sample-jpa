@@ -39,7 +39,7 @@ public class Address {
 		this.isWorkAddress = isWorkAddress;
 	}
 
-	@ManyToOne
+	@ManyToOne(optional = false, targetEntity=Contact.class)
 	private Contact contact;
 
 	public Contact getContact() {
