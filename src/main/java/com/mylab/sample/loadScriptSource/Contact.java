@@ -7,6 +7,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "contact", uniqueConstraints = @UniqueConstraint(columnNames = { "mailAddress" }) )
+@NamedQueries({
+	@NamedQuery(name = "findAllContactsWithMailAddress", query = "SELECT c FROM Contact c WHERE c.mailAddress LIKE :mailAddress"),
+	@NamedQuery(name = "findAllContacts", query = "SELECT c FROM Contact c")
+
+})
 public class Contact {
 
     @Id
