@@ -3,7 +3,9 @@ package com.mylab.sample.loadScriptSource;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "address")
+@Table(name = "address",
+uniqueConstraints=
+@UniqueConstraint(columnNames={"street", "zipcode", "city"}))
 public class Address {
 
 	@Id
