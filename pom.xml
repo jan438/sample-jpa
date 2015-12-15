@@ -2,24 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mylab.wicket.jpa</groupId>
 	<artifactId>loadScriptSource</artifactId>
 	<packaging>jar</packaging>
+	<version>1.1</version>
 	<name>Sample JPA 2.1</name>
-
-	<parent>
-		<groupId>com.mylab.sample.jpa</groupId>
-		<artifactId>parent</artifactId>
-		<version>1.0</version>
-	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>org.eclipse.persistence.jpa</artifactId>
+			<version>2.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>4.12</version>
 		</dependency>
 		<dependency>
 			<groupId>postgresql</groupId>
@@ -34,6 +32,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
